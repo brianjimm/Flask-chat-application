@@ -11,7 +11,7 @@ def init_db():
         conn.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)')
         conn.execute('CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY, user_id INTEGER, message TEXT)')
 
-@app.route('/')
+@app.route('/home')
 def index():
     return render_template('index.html')
 
